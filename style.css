@@ -1,133 +1,91 @@
-div.sign-container {
-    display: block;
-    position: relative;
-}
-
-span.sign {
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    display: block;
-    padding: 14px;
-    font-size: 12px;
-    color: #767676;
-    border-radius: 0 4px 0 4px;
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('font/Genericons.eot');
 }
 
 div.note {
-    padding-left: 3em;
-    padding: 17px;
-    margin-left: 4em;
-    margin-right: 17px;
-    border-top: solid 3px;
-    border-left: solid 3px;
-    border-bottom: solid 3px white;
-}
-div.note-container {
-    position: relative;
-    margin-right: 6em;
-}
-
-.glyph {
-    font-size: 2em;
-}
-
-.s-fire {
-    color:#f04124;
-}
-
-div.s-fire>div {
-    color: black;
-    background-color: #FDCBC3;
-    border-color: #ea2f10;
-}
-
-.s-alert {
-    color: #e99002;
-}
-
-div.s-alert>div {
-    color: black;
-    background-color: #FFFFAD;
-    border-color: darkorange;
+	padding: 17px;
+	margin-left: 4em;
+	margin-right: 17px;
 }
 
 .note>a.urlextern {
-    font-weight: bold;
+	font-weight: bold;
 }
 
-.s-globe {
-    color:#B075FF;
+.note-container {
+	position: relative;
+	margin: 1em 0;
+	background: 0;
+	border: 0;
 }
 
-div.s-globe>div {
-    color: #6900AD;
-    background-color: #F3EAFF;
-    border-color:#B075FF;
+.note-container:before {
+	font-family: "Genericons";
+	content: '\f455';
+	color: #2980B9;
+	position: absolute;
+	display: inline-block;
+	left: 10px;
+	top: 50%;
+	font-size: 60px;
+	line-height: 60px;
+	margin-top: -30px;
 }
 
-.s-info-sign {
-    color: #5bc0de;
-}
+.note-container>div { color: white; background-color: #2980B9; border-color: #2980B9 }
 
-div.s-info-sign>div {
-    color: black;
-    background-color: #E1F8FF;
-    border-color: #3db5d8;
-}
+.n-warning:before, .n-warn:before { content: '\f456'; color: #EBB255 }
+.n-warning>div, .n-warn>div { color: #2B2110; background-color: #EBB255; border-color: #EBB255 }
 
-.s-question-sign {
-    color: #43ac6a;
-}
+.n-bug:before { content: '\f50a'; color: #C63F34 }
+.n-error:before, .n-danger:before, .n-critical:before, .n-important:before { content: '\f414'; color: #C63F34 }
+.n-error>div, .n-danger>div, .n-critical>div, .n-bug>div, .n-important>div { color: #FCD2CA; background-color: #C63F34; border-color: #C63F34 }
 
-div.s-question-sign>div {
-    color: white;
-    background-color: #43ac6a;
-    border-color:#3c9a5f;
-}
+.n-web:before { content: '\f475'; color: #4097D0 }
+.n-web>div { color: white; background-color: #4097D0; border-color: #4097D0 }
 
-.s-education {
-    color: #006687;
-}
+.n-question:before { content: '\f457'; color: #8A45D0 }
+.n-question>div { color: #fff; background-color: #8A45D0; border-color: #8A45D0 }
 
-div.s-education>div {
-    color: white;
-    background-color: black;
-    border-color:#006687;
-}
+.n-success:before { content: '\f418'; color: #2B8F55 }
+.n-success>div { color: #fff; background-color: #2B8F55; border-color: #2B8F55 }
+
+.n-quote:before { content: '\f106'; color:#2b303b; }
+.n-education:before, .n-tip:before { content: '\f411'; color:#2b303b; }
+.n-education>div, .n-tip>div, .n-quote>div { color: #c0c5ce; background-color:#2b303b; border-color: #2b303b }
 
 .triangle {
-    position: absolute;
-    top:0;
-    right: 0;
-    width:17px;
-    height: 100%;
-    -webkit-clip-path: polygon(0 0, 100% 17px, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 17px, 100% 100%, 0 100%);
-    border-bottom: solid 3px;
-    border-right: solid 3px;
-    border-top: solid 3px;
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	width:17px;
+	height:auto;
+	border-bottom: solid 3px;
+	border-right: solid 3px;
+	border-top: solid 3px;
 }
 
 .triangle:before {
-    content: "";
-    top: -3px;
-    right: -3px;
-    width: 0px;
-    height: 0px;
-    position:absolute;
-    border-bottom: 17px solid #484848;
-    border-right: 17px solid transparent;
-    border-radius: 0 0 0 5px;
+	content: "";
+	top: -3px;
+	right: -3px;
+	width: 0px;
+	height: 0px;
+	position:absolute;
+	border-bottom: 17px solid #484848;
+	border-right: 17px solid transparent;
+	border-radius: 0 0 0 5px;
 }
 
 .triangle:after {
-    content: "";
-    position: absolute;
-    top: -3px;
-    right:-3px;
-    width: 0px;
-    height: 0px;
-    border-top: 17px solid #fff; 
-    border-left: 17px solid transparent;
-}*/
+	content: "";
+	position: absolute;
+	top: -3px;
+	right:-3px;
+	width: 0px;
+	height: 0px;
+	border-top: 17px solid #fff; 
+	border-left: 17px solid transparent;
+}
